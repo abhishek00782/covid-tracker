@@ -25,7 +25,7 @@ export function Toolbar({ instance, actions, className }) {
             ? [[...pass, elem], fail]
             : [pass, [...fail, elem]];
         },
-        [[], []]
+        [new Array(), new Array()]
       );
     },
     [appliedFilters]
@@ -46,12 +46,11 @@ export function Toolbar({ instance, actions, className }) {
   const prevNavNeeded = ref.current ? ref.current.scrollLeft !== 0 : false;
 
   const calculateVisibleFilters = useCallback(
-    () =>
-      debounce((v = 0) => {
-        if (ref.current) {
-          setVisibleFilters(Math.min(v + 1, ref.current.children.length));
-        }
-      }, 100),
+    debounce((v = 0) => {
+      if (ref.current) {
+        setVisibleFilters(Math.min(v + 1, ref.current.children.length));
+      }
+    }, 100),
     []
   );
 
@@ -77,7 +76,7 @@ export function Toolbar({ instance, actions, className }) {
 
   useEffect(() => {
     resetScrollPosition();
-  }, [resetScrollPosition]);
+  }, []);
 
   useEffect(() => {
     const root = ref.current;
