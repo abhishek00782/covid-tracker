@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonGroup /> render 1`] = `
+Array [
+  <div
+    className="hfMfKm"
+  >
+    <div />
+  </div>,
+  <div
+    className="cvuhwf"
+  >
+    <button
+      className="gtEVgi"
+    >
+      A
+    </button>
+    <button
+      className="gtEVgi"
+    >
+      B
+    </button>
+  </div>,
+]
+`;
