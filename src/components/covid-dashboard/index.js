@@ -64,7 +64,6 @@ const Dashboard = ({ getCovidData, lastUpdated }) => {
   );
 };
 const mapStateToProps = (state) => {
-  console.log(state, "index");
   return { lastUpdated: state.CovidDetailsReducer.lastUpdated };
 };
 const mapDispatchToProps = (dispatch) => {

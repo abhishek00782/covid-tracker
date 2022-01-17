@@ -4,19 +4,11 @@ import { connect } from "react-redux";
 import { Box, Flex } from "reflexbox";
 import colors from "../../ui-components/colors";
 import { IoMdSquare } from "react-icons/io";
-import {
-  ContentLoaders,
-  ChartLoaders,
-} from "../../common/utils/ContentLoader";
+import { ContentLoaders, ChartLoaders } from "../../common/utils/ContentLoader";
 import { formatNumber } from "../../common/utils/index";
 import { DoughnutChart } from "./charts/charts";
 
-const GlobalSummaryCard = ({
-  summaryData,
-  isLoading,
-}) => {
-  console.log(summaryData);
-
+const GlobalSummaryCard = ({ summaryData, isLoading }) => {
   return (
     <>
       <Card bg={colors.BACKGROUND} p={4} width={"100%"}>

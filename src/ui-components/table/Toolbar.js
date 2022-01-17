@@ -36,7 +36,6 @@ export function Toolbar({ instance, actions, className }) {
     .filter((it) => it.hasFilter)
     .sort((a, b) => (a.filterOrder || 0) - (b.filterOrder || 0));
   const [filteredCols, unfilteredCols] = partition(cols);
-  console.log(filteredCols, unfilteredCols, "filteredCols");
 
   const [visibleFilters, setVisibleFilters] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);

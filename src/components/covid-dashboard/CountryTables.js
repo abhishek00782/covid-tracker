@@ -50,7 +50,6 @@ const CountryTable = ({
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     countryData: state.CovidDetailsReducer.countriesData || [],
     countryList: state.CovidDetailsReducer.countryList || [],

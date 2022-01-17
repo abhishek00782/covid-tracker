@@ -13,7 +13,6 @@ export const NumberRangePicker = ({
 
   const updateCalendar = useCallback(
     (inputValue) => {
-      console.log(inputValue);
       try {
         if (selecting === "from") {
           onChange({

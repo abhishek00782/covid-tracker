@@ -52,7 +52,6 @@ const filterPipeFn = (data, action) => {
 
 const filter = (data, payload) => {
   let composed = pipe(payload, filterPipeFn)(data);
-  console.log(composed, "composed");
   return composed;
 };
 export function CovidDetailsReducer(state = initialState, action) {
