@@ -8,11 +8,29 @@ const initialState = {
   loading: true,
 };
 const sort = (data, payload) => {
-  return data.sort((a, b) =>
-    payload.order === "desc"
-      ? b[payload.by] - a[payload.by]
-      : a[payload.by] - b[payload.by]
-  );
+  return data.sort((a, b) => {
+    if (payload.order === "desc") {
+      if (
+        typeof b[payload.by] == "number" &&
+        typeof a[payload.by] === "number"
+      ) {
+        return b[payload.by] - a[payload.by];
+      } else {
+        return b[payload.by] > a[payload.by] ? 1 : -1;
+      }
+    } else {
+      if (
+        typeof b[payload.by] == "number" &&
+        typeof a[payload.by] === "number"
+      ) {
+        return a[payload.by] - b[payload.by];
+      } else {
+        return a[payload.by] > b[payload.by] ? 1 : -1;
+      }
+    }
+    // ? b[payload.by] > a[payload.by]
+    // : a[payload.by] < b[payload.by]
+  });
 };
 
 //pipe function for filtering using nested fiters

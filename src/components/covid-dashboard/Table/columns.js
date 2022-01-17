@@ -17,6 +17,7 @@ const COLUMNS = (filterprops) => [
       inputWidth: 150,
       options: filterprops,
     },
+    canSort: true,
     filterOrder: 1,
   },
   {
