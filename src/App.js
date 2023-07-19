@@ -3,6 +3,7 @@ import "./App.css";
 import Dashboard from "./components/covid-dashboard/index";
 
 function App() {
+  console.log('')
   return <Dashboard />;
 }
 
